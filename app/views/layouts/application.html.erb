@@ -24,6 +24,12 @@
     </header>
 
     <main class="sm:px-0 pt-8 md:px-8 pb-16 max-w-screen-md mx-auto">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </main>
 

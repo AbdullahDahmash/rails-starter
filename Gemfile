@@ -76,3 +76,4 @@ gem 'activejob-uniqueness'
 gem "translate_enum"
 gem "active_storage_validations"
 gem 'pagy'
+gem 'devise'
