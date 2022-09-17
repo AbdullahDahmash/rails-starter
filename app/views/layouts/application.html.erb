@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= yield :head %>
+    <%= javascript_include_tag "alpine_turbo_drive_adapter.js" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="antialiased bg-white min-h-screen" dir="rtl">
+    <header>
+      <div class="rounded-b-lg text-center border border-gray-100 bg-white shadow-2xl p-2">
+        <% if @title %>
+          <%= @title %>
+        <% else %>
+          Rails App
+        <% end %>
+      </div>
+    </header>
+
+    <main class="sm:px-0 pt-8 md:px-8 pb-16 max-w-screen-md mx-auto">
+      <%= yield %>
+    </main>
+
+  </body>
+</html>

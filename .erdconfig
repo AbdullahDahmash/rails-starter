@@ -1,0 +1,2 @@
+exclude: 'ActiveRecord::InternalMetadata, ActiveRecord::SchemaMigration, ActiveStorage::VariantRecord, ActiveStorage::Blob, ActiveStorage::Attachment'
+filetype: svg

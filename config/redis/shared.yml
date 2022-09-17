@@ -1,0 +1,10 @@
+production: &production
+  url: <%= "redis://" + ENV.fetch("REDIS_URL") { "localhost:6379" } + "/shared" %>
+  timeout: 1
+
+development: &development
+  url: <%= "redis://" + ENV.fetch("REDIS_URL") { "localhost:6379" } + "/shared" %>
+  timeout: 1
+
+test:
+  <<: *development

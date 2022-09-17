@@ -1,0 +1,4 @@
+[submodule "osrm"]
+	path = osrm
+	url = https://github.com/Project-OSRM/osrm-backend.git
+	branch = 5.24

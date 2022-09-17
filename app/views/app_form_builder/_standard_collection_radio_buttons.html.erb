@@ -1,0 +1,8 @@
+<% method = args[0] %>
+<% collection = args[1] %>
+<% value_method = args[2] %>
+<% text_method = args[3] %>
+
+<% collection.each do |record| %>
+  <%= field.standard_radio_button method, record.send(value_method), record.send(text_method), checked: field.object.send(method) == record.send(value_method) %>
+<% end %>

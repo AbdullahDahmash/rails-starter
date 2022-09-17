@@ -1,0 +1,5 @@
+development: redis://<%= ENV.fetch("REDIS_URL") { "localhost:6379"  } %>
+test: redis://<%= ENV.fetch("REDIS_URL") { "localhost:6379"  } %>
+staging: redis://<%= ENV.fetch("REDIS_URL") { "localhost:6379"  } %>
+fi: redis://<%= ENV.fetch("REDIS_URL") { "localhost:6379"  } %>
+production: redis://<%= ENV.fetch("REDIS_URL") { "localhost:6379"  } %>

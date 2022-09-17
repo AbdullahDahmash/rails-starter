@@ -1,0 +1,7 @@
+
+# Sample
+#test_blog_job:
+#  cron: '0 12 * * *'
+#  rails_env: production
+#  class: TestJob
+#  description: A test job that runs once a day

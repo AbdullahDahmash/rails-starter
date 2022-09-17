@@ -1,0 +1,9 @@
+<% method = args[0] %>
+
+<% if field.should_display_input? method, controller.access_object %>
+
+  <%= field.standard_label method %>
+
+  <%= capture(&block) %>
+
+<% end %>

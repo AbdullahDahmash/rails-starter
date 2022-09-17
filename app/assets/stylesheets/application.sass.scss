@@ -1,0 +1,11 @@
+// Entry point for your Sass build
+.turbo-progress-bar {
+	height: 3px;
+	background: #ff2153;
+}
+
+[x-cloak] { display: none !important;  }
+
+.required:after {
+  content: " *";
+}

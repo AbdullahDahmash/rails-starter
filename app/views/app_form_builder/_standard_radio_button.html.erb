@@ -1,0 +1,9 @@
+<% method = args[0] %>
+<% value = args[1] %>
+<% text = args[2] %>
+<% kwargs = defined?(kwargs) ? kwargs : {} %>
+
+<div class="flex items-center">
+  <%= field.radio_button method, value, class: "focus:ring-2 focus:ring-indigo-500 ring-offset-2 h-4 w-4 text-indigo-600 border-gray-300 rounded text-green-400 radio_buttons required mx-2", **kwargs %>
+  <%= label field.object_name, "#{method}_#{value}", text, class: "my-1 ml-3 block text-sm font-medium text-gray-400 collection_radio_buttons" %>
+</div>

@@ -1,0 +1,10 @@
+<% method = args[0] %>
+<% collection = args[1] %>
+<% value_method = args[2] %>
+<% text_method = args[3] %>
+
+<%= field.select method, {}, {}, { class: "text-center border-0 bg-gray-100 rounded py-2 px-3 focus:outline-none focus:ring-0 focus:border-blue-500 text-gray-400 leading-6 transition-colors duration-200 ease-in-out border-green-400 select mx-3" } do %>
+  <% collection.each do |record| %>
+    <%= content_tag :option, record.send(text_method), value: record.send(value_method), selected: field.object.send(method) == record.send(value_method) %>
+  <% end %>
+<% end %>

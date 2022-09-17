@@ -1,0 +1,11 @@
+development:
+  adapter: redis
+  url: <%= "redis://" + ENV.fetch("REDIS_URL") { "localhost:6379"  } + "/cable" %>
+
+test:
+  adapter: test
+
+production:
+  adapter: redis
+  url: <%= "redis://" + ENV.fetch("REDIS_URL") { "localhost:6379" } + "/cable" %>
+  channel_prefix: rails_app_production
